@@ -11,17 +11,37 @@
 
 <body>
   <nav class="navbar bg-info">
-    <a class="navbar-brand text-light p-3" href="/">Note Taker
-    </a>
+    <a class="navbar-brand text-light p-3" href="/">Note Taker</a>
+    <!-- Link to the notes page -->
+    <a class="navbar-brand text-light p-3" href="/notes">Notes</a>
   </nav>
   <div class="container">
-    <div style="margin-top: 80px;" class="text-center p-5 mb-4 bg-light">
-      <h1 class="display-4">Note Taker <span role="img" aria-label="Memo">📝</span></h1>
-      <h4 class="mt-4">Take notes with Express</h4>
-      <a class="btn btn-primary btn-lg mt-4" href="/notes" role="button">Get Started</a>
+    <div class="row">
+      <div class="col-md-4">
+        <!-- Left-hand column for displaying existing notes -->
+        <div id="existingNotes">
+          <!-- Existing notes will be listed here -->
+        </div>
+      </div>
+      <div class="col-md-8">
+        <!-- Right-hand column for entering new notes -->
+        <h3>Enter New Note</h3>
+        <form id="noteForm">
+          <div class="mb-3">
+            <label for="noteTitle" class="form-label">Note Title</label>
+            <input type="text" class="form-control" id="noteTitle">
+          </div>
+          <div class="mb-3">
+            <label for="noteText" class="form-label">Note Text</label>
+            <textarea class="form-control" id="noteText" rows="5"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary save-note">Save Note</button>
+          <button type="button" class="btn btn-secondary clear-form">Clear Form</button>
+        </form>
+      </div>
     </div>
   </div>
-  <script src="/assets/js/index.js"></script>
+  <script src="/assets/js/notes.js"></script>
 </body>
 
 </html>
