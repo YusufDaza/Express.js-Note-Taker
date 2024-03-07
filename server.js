@@ -18,9 +18,11 @@ app.get("api/notes", (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'notes.html'));
 });
 
-// Route to serve the index.html file for all other GET requests
+//api routes
+
+//html routes stay in server.js unmodularized
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, "./public.notes.html"));
 });
 
 
