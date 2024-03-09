@@ -6,5 +6,9 @@
 	{
 		"title": "hello",
 		"text": "hello"
+	},
+	{
+		"title": "Bye",
+		"text": "bye"
 	}
 ]
